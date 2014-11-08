@@ -31,7 +31,7 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="br_space" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="br_space" x="0" y="0" htiled="-1" vtiled="-1" hspeed="1" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -65,6 +65,6 @@
   <PhysicsWorldRight>1024</PhysicsWorldRight>
   <PhysicsWorldBottom>768</PhysicsWorldBottom>
   <PhysicsWorldGravityX>0</PhysicsWorldGravityX>
-  <PhysicsWorldGravityY>10</PhysicsWorldGravityY>
+  <PhysicsWorldGravityY>0</PhysicsWorldGravityY>
   <PhysicsWorldPixToMeters>0.100000001490116</PhysicsWorldPixToMeters>
 </room>
