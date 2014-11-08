@@ -30,6 +30,9 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\font</font>
+  </fonts>
   <objects name="objects">
     <objects name="startmenu_objects">
       <object>objects\obj_start_button</object>
@@ -52,7 +55,7 @@
     <room>rooms\rm_game</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41951.9194160648</constant>
+    <constant name="GM_build_date">41951.9507904745</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
