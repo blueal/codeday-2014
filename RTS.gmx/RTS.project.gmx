@@ -20,12 +20,17 @@
       <sprites name="blue">
         <sprite>sprites\spr_b_base</sprite>
         <sprite>sprites\spr_b_cube</sprite>
+        <sprite>sprites\spr_b_ship</sprite>
       </sprites>
       <sprites name="yellow">
         <sprite>sprites\spr_y_cube</sprite>
+        <sprite>sprites\spr_y_base</sprite>
+        <sprite>sprites\spr_y_ship</sprite>
       </sprites>
       <sprites name="green">
         <sprite>sprites\spr_g_cube</sprite>
+        <sprite>sprites\spr_g_base</sprite>
+        <sprite>sprites\spr_g_ship</sprite>
       </sprites>
     </sprites>
     <sprite>sprites\spr_camera</sprite>
@@ -72,7 +77,7 @@
     <room>rooms\rm_game</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41952.1395527778</constant>
+    <constant name="GM_build_date">41952.1439965972</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
