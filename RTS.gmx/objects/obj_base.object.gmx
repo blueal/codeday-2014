@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>timer++
-if (timer &gt; 119)
+if (timer &gt; 60)
 {
     do {
         new_x = random_range(32,-32);
