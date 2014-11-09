@@ -44,6 +44,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\script_Players.gml</script>
+    <script>scripts\script_Bases.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\base_numbers</font>
