@@ -7,61 +7,66 @@
 */
 if(argument0 == "create"){
     if(argument1 == "pink"){
-        endOfArray = array_length_1d(global.pinkPlayer);
-        global.pinkPlayer[endOfArray] = argument2;
+        
+        list_id = global.pinkPlayerList;
+        amountInArray = ds_list_size(list_id);
+        ds_list_add(list_id, argument2);
         (argument2).sprite_index = spr_p_ship;
         (argument2).team = "pink";
-        obj_p_cube.troop=endOfArray;
+        obj_p_cube.troop=amountInArray;
     }
     else if(argument1 == "blue"){
-        endOfArray = array_length_1d(global.bluePlayer);
-        global.bluePlayer[endOfArray] = argument1;
+        list_id = global.bluePlayerList;
+        amountInArray = ds_list_size(list_id);
+        ds_list_add(list_id, argument2);
         (argument2).sprite_index = spr_b_ship;
         (argument2).team = "blue";
-        obj_b_cube.troop=endOfArray;
+        obj_b_cube.troop=amountInArray;
     }
     else if(argument1 == "yellow"){
-        endOfArray = array_length_1d(global.yellowPlayer);
-        global.yellowPlayer[endOfArray] = argument1;
+        list_id = global.yellowPlayerList;
+        amountInArray = ds_list_size(list_id);
+        ds_list_add(list_id, argument2);
         (argument2).sprite_index = spr_y_ship;
         (argument2).team = "yellow";
-        obj_y_cube.troop=endOfArray;
+        obj_y_cube.troop=amountInArray;    
     }
     else if(argument1 == "green"){
-        endOfArray = array_length_1d(global.greenPlayer);
-        global.greenPlayer[endOfArray] = argument1;
+        list_id = global.greenPlayerList;
+        amountInArray = ds_list_size(list_id);
+        ds_list_add(list_id, argument2);
         (argument2).sprite_index = spr_g_ship;
         (argument2).team = "green";
-        obj_g_cube.troop=endOfArray;
+        obj_g_cube.troop=amountInArray;    
     }
 }
 else if(argument0 == "die"){
     if(argument1 == "pink"){
-        endOfArray = array_length_1d(global.pinkPlayer);
-        global.pinkPlayer[endOfArray] = argument1;
-        (argument2).sprite_index = spr_p_ship;
-        (argument2).team = "pink";
-        obj_p_cube.troop=endOfArray;
+        list_id = global.pinkPlayerList;
+        item_posistion = ds_list_find_index(list_id, argument2);
+        ds_list_delete(list_id, item_posistion);
+        amountInArray = ds_list_size(list_id);
+        obj_p_cube.troop=amountInArray;   
     }
     else if(argument1 == "blue"){
-        endOfArray = array_length_1d(global.bluePlayer);
-        global.bluePlayer[endOfArray] = argument1;
-        (argument1).sprite_index = spr_b_ship;
-        (argument1).team = "blue";
-        obj_b_cube.troop=endOfArray;
+        list_id = global.bluePlayerList;
+        item_posistion = ds_list_find_index(list_id, argument2);
+        ds_list_delete(list_id, item_posistion);
+        amountInArray = ds_list_size(list_id);
+        obj_b_cube.troop=amountInArray;   
     }
     else if(argument1 == "yellow"){
-        endOfArray = array_length_1d(global.yellowPlayer);
-        global.yellowPlayer[endOfArray] = argument1;
-        (argument2).sprite_index = spr_y_ship;
-        (argument2).team = "yellow";
-        obj_y_cube.troop=endOfArray;
+        list_id = global.yellowPlayerList;
+        item_posistion = ds_list_find_index(list_id, argument2);
+        ds_list_delete(list_id, item_posistion);
+        amountInArray = ds_list_size(list_id);
+        obj_y_cube.troop=amountInArray;   
     }
     else if(argument1 == "green"){
-        endOfArray = array_length_1d(global.greenPlayer);
-        global.greenPlayer[endOfArray] = argument1;
-        (argument2).sprite_index = spr_g_ship;
-        (argument2).team = "green";
-        obj_g_cube.troop=endOfArray;
+        list_id = global.greenPlayerList;
+        item_posistion = ds_list_find_index(list_id, argument2);
+        ds_list_delete(list_id, item_posistion);
+        amountInArray = ds_list_size(list_id);
+        obj_g_cube.troop=amountInArray;   
     }
 }

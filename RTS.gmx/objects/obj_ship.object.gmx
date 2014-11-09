@@ -75,7 +75,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>script_Players("die", team, self.id);
+</string>
           </argument>
         </arguments>
       </action>

@@ -129,13 +129,33 @@ else if (team=="green")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.base1[0] = 100008;
+            <string>/*global.base1[0] = 100008;
 global.base2[0] = 100009;
 global.base3[0] = 100010;
 global.base4[0] = 100011;
 global.base5[0] = 100012;
 global.base6[0] = 100014;
+*/
+global.pinkPlayerList = ds_list_create();
+global.bluePlayerList = ds_list_create();
+global.yellowPlayerList = ds_list_create();
+global.greenPlayerList = ds_list_create();
 
+global.pinkBaseList = ds_list_create();
+global.blueBaseList = ds_list_create();
+global.yellowBaseList = ds_list_create();
+global.greenBaseList = ds_list_create();
+
+ds_list_add(global.pinkPlayerList, "pink") //Adds the value at the end of the list.
+ds_list_add(global.bluePlayerList, "blue")
+ds_list_add(global.yellowPlayerList, "yellow")
+ds_list_add(global.greenPlayerList, "green")
+
+ds_list_add(global.pinkBaseList, "pink") //Adds the value at the end of the list.
+ds_list_add(global.blueBaseList, "blue")
+ds_list_add(global.yellowBaseList, "yellow")
+ds_list_add(global.greenBaseList, "green")
+/*
 global.pinkPlayer[0] = "pink";
 global.bluePlayer[0] = "blue";
 global.yellowPlayer[0] = "yellow";
@@ -145,7 +165,7 @@ global.pinkBase[0] = "pink";
 global.blueBase[0] = "blue";
 global.yellowBase[0] = "yellow";
 global.greenBase[0] = "green";
-
+*/
 script_BasesChangeTeam(team, self.id);
 
 </string>
