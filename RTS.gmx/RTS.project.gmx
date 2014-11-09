@@ -28,8 +28,11 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_camera</sprite>
+    <sprite>sprites\spr_clickmarker</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\br_space</background>
+  </backgrounds>
   <paths name="paths"/>
   <fonts name="fonts">
     <font>fonts\base_numbers</font>
