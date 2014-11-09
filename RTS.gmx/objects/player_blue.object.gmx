@@ -34,8 +34,8 @@ if(!(idle))
         a[w]=ds_list_find_value(global.blueBaseList,w);
     }
     
-    show_debug_message(string(a[0].soldiers*a[0].modifer))
-    if(ds_list_size(global.bluePlayerList)&lt;(60*a[0].modifer))
+   
+    if(ds_list_size(global.bluePlayerList)&lt;(60*a[0].modifer) &amp;&amp; !(attack))
     {
         
         markerx = a[0].x-(a[0].x-a[1].x)/2
@@ -43,37 +43,47 @@ if(!(idle))
     } else {
         if(charge)
         {
-            target=random_range(0,3);
+            attack=true
+            target = irandom_range(0,3);
+            show_debug_message("CHARGE: "+string(target))
             if(target==0)
             {
-                i = global.pinkBaseList;
+                i = ds_list_size(global.pinkBaseList)
                 for(w=0;w&lt;=i;w++)
                 {
                     b[w]=ds_list_find_value(global.pinkBaseList,w);
                 }
-                markerx = b[random_range(0,ds_list_size(global.pinkBaseList))].x
-                markery = b[random_range(0,ds_list_size(global.pinkBaseList))].y
+                temp = random_range(0,i+1)
+                markerx = b[temp].x
+                markery = b[temp].y
+                show_debug_message("PINK")
             }
             if(target==1)
             {
-                i = global.yellowBaseList;
+                i = ds_list_size(global.yellowBaseList);
                 for(w=0;w&lt;=i;w++)
                 {
                     b[w]=ds_list_find_value(global.yellowBaseList,w);
                 }
-                markerx = b[random_range(0,ds_list_size(global.yellowBaseList))].x
-                markery = b[random_range(0,ds_list_size(global.yellowBaseList))].y
+                temp = irandom_range(0,ds_list_size(global.yellowBaseList))
+                markerx = b[temp].x
+                markery = b[temp].y
+                show_debug_message("YELLOW")
             }
             if(target==2)
             {
-                i = global.greenBaseList;
+                i = ds_list_size(global.greenBaseList)
                 for(w=0;w&lt;=i;w++)
                 {
                     b[w]=ds_list_find_value(global.greenBaseList,w);
                 }
-                markerx = b[random_range(0,ds_list_size(global.greenBaseList))].x
-                markery = b[random_range(0,ds_list_size(global.greenBaseList))].y
+                temp = irandom_range(0,ds_list_size(global.greenBaseList))
+                markerx = b[temp].x
+                markery = b[temp].y
+                show_debug_message("GREEN")
             }
+            charge=false;
+            
         
         }
     }
@@ -132,6 +142,30 @@ if(!(idle))
           <argument>
             <kind>0</kind>
             <string>true</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>attack</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>false</string>
           </argument>
         </arguments>
       </action>
