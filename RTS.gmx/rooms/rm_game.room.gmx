@@ -69,12 +69,20 @@ show_debug_message("Room Loaded");</code>
     <instance objName="obj_y_cube" x="3952" y="3248" name="inst_9D6D1C68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4608" y="3088" name="inst_33D04428" locked="0" code="team=&quot;blue&quot;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4976" y="3344" name="inst_C0326D6E" locked="0" code="team=&quot;blue&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_base" x="4960" y="3696" name="inst_8E776C58" locked="0" code="team = &quot;pink&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_base" x="4288" y="3664" name="inst_E53B1C51" locked="0" code="team = &quot;yellow&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_base" x="4640" y="3872" name="inst_8BBD97F0" locked="0" code="team = &quot;pink&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4832" y="3856" name="inst_8E776C58" locked="0" code="team = &quot;pink&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4064" y="3696" name="inst_401C78C5" locked="0" code="team = &quot;yellow&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4592" y="3968" name="inst_8BBD97F0" locked="0" code="team = &quot;pink&quot;;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controller" x="0" y="0" name="inst_C69A3BBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4240" y="3312" name="inst_E698D66F" locked="0" code="team=&quot;green&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="player_blue" x="0" y="32" name="inst_03CBB0F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4688" y="3856" name="inst_D59954A2" locked="0" code="team=&quot;pink&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4096" y="3584" name="inst_0A77F79A" locked="0" code="team=&quot;yellow&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4256" y="3200" name="inst_D40163FE" locked="0" code="team=&quot;green&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="player_yellow" x="2976" y="16" name="inst_36F15F60" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4896" y="3072" name="inst_1921CAFF" locked="0" code="team = &quot;blue&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4128" y="3280" name="inst_DA0BEC65" locked="0" code="team = &quot;green&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4112" y="3648" name="inst_6F9BB5AF" locked="0" code="team=&quot;yellow&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4048" y="3632" name="inst_680B4DA7" locked="0" code="team=&quot;yellow&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

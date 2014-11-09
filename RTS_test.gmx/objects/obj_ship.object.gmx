@@ -53,10 +53,14 @@
 {
     hp=500*(1+(level/3));
 } else if(team=="yellow"){
-    hp=1000;
+    hp=7;
 } else {
     hp=500;
 }
+
+collide = false
+colision = 0
+takeit=false
 </string>
           </argument>
         </arguments>
@@ -110,6 +114,64 @@
 }
 instance_destroy()
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(colision&gt;299)
+{
+    takeit=true
+}
+if(collide)
+{
+    colision+=1
+} else {
+    coision=0
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>collide</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -286,19 +348,26 @@ if team = "pink" &amp;&amp; distance_to_object (obj_ship) &lt;= 5
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(other.team != team)
+            <string>colide=true;
+if(other.team != team)
 {
-    other.hp-=50;
+    other.hp-=75;
     other.touchedTeam = team;
 } else {
     if(team=="yellow")
     {
-        other.hp+=35;
+        other.hp+=25;
     } else {
         other.hp+=45;
     }
 }
 
+show_debug_message(string(colision));
+
+if(takeit)
+{
+    other.team=team
+}
 
 //BLue ai
 if(sprite_index!=spr_b_ship)
@@ -364,6 +433,28 @@ if(sprite_index!=spr_b_ship)
  
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>

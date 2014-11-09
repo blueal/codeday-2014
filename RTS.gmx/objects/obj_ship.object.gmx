@@ -51,11 +51,41 @@
             <kind>1</kind>
             <string>if(team=="pink")
 {
-    hp=500*obj_p_cube.level;
+    hp=500*(1+(level/3));
+} else if(team=="yellow"){
+    hp=7;
 } else {
     hp=500;
-}   
+}
+
+collide = false
+colision = 0
+takeit=false
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>first</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>true</string>
           </argument>
         </arguments>
       </action>
@@ -84,6 +114,64 @@
 }
 instance_destroy()
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="2">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(colision&gt;299)
+{
+    takeit=true
+}
+if(collide)
+{
+    colision+=1
+} else {
+    coision=0
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>collide</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -120,6 +208,39 @@ else
 
 if(team=="pink")
 {
+    if(first)
+    {         
+            if(instance_exists(obj_clickmarkerLeft)){
+                if (distance_to_object(obj_clickmarkerLeft) &gt; 5) &amp;&amp; (isleft) 
+                {
+                    move_towards_point(obj_clickmarkerLeft.x,obj_clickmarkerLeft.y,2)
+                }
+                if (distance_to_object (obj_clickmarkerLeft) &lt;= 10+obj_p_cube.troop/20)
+                {
+                    speed = 0;
+                    obj_clickmarkerLeft.visible = false;    
+                }
+                }
+                
+                if(instance_exists(obj_clickmarkerRight)){
+                if(distance_to_object(obj_clickmarkerRight) &gt; 5) &amp;&amp; (!isleft)
+                {
+                    move_towards_point(obj_clickmarkerRight.x,obj_clickmarkerRight.y,2);
+                } 
+                
+                
+                if (distance_to_object (obj_clickmarkerRight) &lt;= 10+obj_p_cube.troop/20)
+                {
+                    speed = 0;
+                    obj_clickmarkerRight.visible = false;    
+                }
+            }
+                
+            first=false;
+    }
+    
+    
+    
     if (mouse_check_button(mb_left)) &amp;&amp; (distance_to_object(obj_clickmarkerLeft) &gt; 5) &amp;&amp; (isleft) 
     {
         move_towards_point(obj_clickmarkerLeft.x,obj_clickmarkerLeft.y,2)
@@ -141,8 +262,14 @@ if(team=="pink")
     }    
     
 } else if (team=="blue") {
-    move_towards_point(player_blue.markerx,player_blue.markery,2)
+    move_towards_point(player_blue.markerx,player_blue.markery,5)
     if (distance_to_point(player_blue.markerx,player_blue.markery) &lt;= 15+obj_b_cube.troop/30)
+    {
+        speed = 0;
+    }
+} else if (team=="yellow") {
+    move_towards_point(player_yellow.markerx,player_yellow.markery,2)
+    if (distance_to_point(player_yellow.markerx,player_yellow.markery) &lt;= 15+obj_y_cube.troop/30)
     {
         speed = 0;
     }
@@ -221,12 +348,45 @@ if team = "pink" &amp;&amp; distance_to_object (obj_ship) &lt;= 5
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(other.team != team)
+            <string>colide=true;
+if(other.team != team)
 {
-    other.hp-=50;
+    other.hp-=75;
     other.touchedTeam = team;
 } else {
-    other.hp+=45;
+    if(team=="yellow")
+    {
+        other.hp+=25;
+    } else {
+        other.hp+=45;
+    }
+}
+
+show_debug_message(string(colision));
+
+if(takeit)
+{
+    other.team=team
+}
+
+//BLue ai
+if(sprite_index!=spr_b_ship)
+{
+    if(other.sprite_index==spr_b_base)
+    {
+        player_blue.attackers +=1;
+        player_blue.attackx = other.x
+        player_blue.attacky = other.y
+        player_blue.attackon = other
+    }
+} else if (sprite_index==spr_b_ship){
+    if(other==player_blue.attackon)
+    {
+        if(other.team=="blue")
+        {
+            player_blue.starttimer=true
+        }
+    }
 }
 </string>
           </argument>
@@ -273,6 +433,28 @@ if team = "pink" &amp;&amp; distance_to_object (obj_ship) &lt;= 5
  
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string></string>
           </argument>
         </arguments>
       </action>
