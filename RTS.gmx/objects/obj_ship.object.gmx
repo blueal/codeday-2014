@@ -105,7 +105,7 @@
 {
     move_towards_point(obj_clickmarker.x,obj_clickmarker.y,5)
 }
-if (distance_to_object (obj_clickmarker) &lt;= 10)
+if (distance_to_object (obj_clickmarker) &lt;= 10+obj_p_cube.troop/25)
 {
 speed = 0;
 obj_clickmarker.visible = false;    
