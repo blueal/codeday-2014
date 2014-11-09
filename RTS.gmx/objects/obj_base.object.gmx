@@ -52,10 +52,10 @@
             <string>show_debug_message(self.id);
 global.group1[0] = 100008;
 global.group2[0] = 100009;
-global.group3[0] = 1000010;
-global.group4[0] = 1000011;
-global.group5[0] = 1000012;
-global.group6[0] = 1000014;
+global.group3[0] = 100010;
+global.group4[0] = 100011;
+global.group5[0] = 100012;
+global.group6[0] = 100014;
 
 
 </string>
@@ -88,14 +88,49 @@ if (timer &gt; 59)
         new_y = random_range(32,-32);
     } until place_free(x+new_x, y+new_y);
     v_id = instance_create(x+new_x,y+new_y, obj_ship);
-
-
-    ContaingingSprites1[0] = self.id;
-    endOfArray = array_length_1d(ContaingingSprites1);
-    ContaingingSprites1[endOfArray] = v_id;
+    self_id = self.id;
     
-    show_debug_message(ContaingingSprites1);
-    
+    if(global.group1[0] == self_id)
+    {
+        endOfArray = array_length_1d(global.group1);
+        global.group1[endOfArray] = v_id;
+        show_debug_message(global.group1);
+    }
+    else if(global.group2[0] == self_id)
+    {
+        endOfArray = array_length_1d(global.group2);
+        global.group2[endOfArray] = v_id;
+        show_debug_message(global.group2);
+    }
+    else if(global.group3[0] == self_id)
+    {
+        endOfArray = array_length_1d(global.group3);
+        global.group3[endOfArray] = v_id;
+        show_debug_message(global.group3);
+    }
+    else if(global.group4[0] == self_id)
+    {
+        endOfArray = array_length_1d(global.group4);
+        global.group4[endOfArray] = v_id;
+        show_debug_message(global.group4);
+    }
+    else if(global.group5[0] == self_id)
+    {
+        endOfArray = array_length_1d(global.group5);
+        global.group5[endOfArray] = v_id;
+        show_debug_message(global.group5);
+    }
+    else if(global.group6[0] == self_id)
+    {
+        endOfArray = array_length_1d(global.group6);
+        global.group6[endOfArray] = v_id;
+        show_debug_message(global.group6);
+    }
+    else
+    {
+        show_debug_message("Fatal Error: ID of Base not found within given arrays");
+        game_end();
+    }
     timer = 0;
 }
 
