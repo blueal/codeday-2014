@@ -88,50 +88,6 @@ if (timer &gt; 60)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.pinkPlayerList = ds_list_create();
-global.bluePlayerList = ds_list_create();
-global.yellowPlayerList = ds_list_create();
-global.greenPlayerList = ds_list_create();
-
-global.pinkBaseList = ds_list_create();
-global.blueBaseList = ds_list_create();
-global.yellowBaseList = ds_list_create();
-global.greenBaseList = ds_list_create();
-
-/*
-ds_list_add(global.pinkPlayerList, "pink")
-ds_list_add(global.bluePlayerList, "blue")
-ds_list_add(global.yellowPlayerList, "yellow")
-ds_list_add(global.greenPlayerList, "green")
-
-ds_list_add(global.pinkBaseList, "pink") 
-ds_list_add(global.blueBaseList, "blue")
-ds_list_add(global.yellowBaseList, "yellow")
-ds_list_add(global.greenBaseList, "green")
-*/
-
-
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>script_BasesChangeTeam(team, self.id);
 </string>
           </argument>

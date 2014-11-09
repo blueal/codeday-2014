@@ -10,7 +10,17 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code></code>
+  <code>global.pinkPlayerList = ds_list_create();
+global.bluePlayerList = ds_list_create();
+global.yellowPlayerList = ds_list_create();
+global.greenPlayerList = ds_list_create();
+
+global.pinkBaseList = ds_list_create();
+global.blueBaseList = ds_list_create();
+global.yellowBaseList = ds_list_create();
+global.greenBaseList = ds_list_create();
+
+show_debug_message("Room Loaded");</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

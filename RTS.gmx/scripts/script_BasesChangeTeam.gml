@@ -13,8 +13,6 @@ if(argument0 == "pink")
     amountInArray = ds_list_size(list_id1);
     obj_p_cube.bases=amountInArray;
     
-     
-    show_debug_message(list_id1);
 } 
 else if (argument0 == "blue") 
 {
@@ -24,7 +22,6 @@ else if (argument0 == "blue")
     amountInArray = ds_list_size(list_id1);    
     obj_b_cube.bases=amountInArray;
     
-    show_debug_message(list_id1);
 }
 else if(argument0 == "yellow")
 {

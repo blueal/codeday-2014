@@ -72,3 +72,7 @@ else if(argument0 == "die"){
         obj_g_cube.troop=amountInArray;   
     }
 }
+else
+{
+    show_error("Invalid State Passed into 'script_players'. Expected either 'create' or 'die' but received '" + argument0 + "' instead." , true);
+}
