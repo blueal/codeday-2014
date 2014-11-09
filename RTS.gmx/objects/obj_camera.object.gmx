@@ -108,19 +108,19 @@ if(keyboard_check(ord('D')))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(mouse_x &gt; 1000+view_xview)
+            <string>if(mouse_x &gt; 988+view_xview)
 {
     obj_camera.x+=10;
 }
-if(mouse_x &lt; 24+view_xview)
+if(mouse_x &lt; 36+view_xview)
 {
     obj_camera.x-=10;
 }
-if(mouse_y &gt; 744+view_yview)
+if(mouse_y &gt; 732+view_yview)
 {
     obj_camera.y+=10;
 }
-if(mouse_y &lt; 24+view_yview)
+if(mouse_y &lt; 36+view_yview)
 {
     obj_camera.y-=10;
 }
