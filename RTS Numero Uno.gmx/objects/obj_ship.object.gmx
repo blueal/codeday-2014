@@ -32,6 +32,7 @@
 if (distance_to_object (obj_clickmarker) &lt;= 5)
 {
 speed = 0;
+obj_clickmarker.visible = false;
 }
     
 </string>
