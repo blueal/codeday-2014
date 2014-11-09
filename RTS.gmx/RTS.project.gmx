@@ -18,6 +18,7 @@
         <sprite>sprites\spr_p_ship</sprite>
       </sprites>
       <sprites name="blue">
+        <sprite>sprites\spr_b_base</sprite>
         <sprite>sprites\spr_b_cube</sprite>
       </sprites>
       <sprites name="yellow">
@@ -67,7 +68,7 @@
     <room>rooms\rm_game</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41952.0820429745</constant>
+    <constant name="GM_build_date">41952.0989477546</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>
