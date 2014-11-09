@@ -57,7 +57,7 @@
     <instance objName="obj_b_cube" x="3952" y="3152" name="inst_57416394" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_y_cube" x="3952" y="3248" name="inst_9D6D1C68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4608" y="3248" name="inst_33D04428" locked="0" code="team=&quot;blue&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_base" x="4912" y="3392" name="inst_C0326D6E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4912" y="3392" name="inst_C0326D6E" locked="0" code="team=&quot;blue&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4768" y="3648" name="inst_8E776C58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4384" y="3648" name="inst_E53B1C51" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4384" y="3296" name="inst_8BBD97F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

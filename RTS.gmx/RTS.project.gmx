@@ -37,6 +37,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\script_Players.gml</script>
+    <script>scripts\script_bases.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\base_numbers</font>
@@ -71,7 +72,7 @@
     <room>rooms\rm_game</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41952.0989477546</constant>
+    <constant name="GM_build_date">41952.1395527778</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

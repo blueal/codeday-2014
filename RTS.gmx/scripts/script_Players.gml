@@ -9,6 +9,7 @@ if(argument0 == "pink"){
     endOfArray = array_length_1d(global.pinkPlayer);
     global.pinkPlayer[endOfArray] = argument1;
     show_debug_message(global.pinkPlayer);
+    obj_p_cube.troop+=1
 }
 else if(argument0 == "blue"){
     endOfArray = array_length_1d(global.bluePlayer);
