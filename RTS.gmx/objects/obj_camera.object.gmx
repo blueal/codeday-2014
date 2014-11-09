@@ -141,7 +141,7 @@ if(keyboard_check(vk_space))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if ds_list_size(global.pinkBaseList) &gt;= 6
+            <string>if ds_list_size(global.pinkBaseList) &gt;= 13
 {
 room_goto(3)
 }
