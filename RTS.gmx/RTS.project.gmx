@@ -38,6 +38,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\br_space</background>
+    <background>background\br_credits</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -65,6 +66,7 @@
       </objects>
       <object>objects\obj_camera</object>
       <object>objects\obj_ship</object>
+      <object>objects\obj_b_ship</object>
       <object>objects\obj_base</object>
       <object>objects\obj_controller</object>
       <object>objects\obj_clickmarker</object>
@@ -74,6 +76,7 @@
   <rooms name="rooms">
     <room>rooms\rm_start</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_credits</room>
   </rooms>
   <constants number="2">
     <constant name="GM_build_date">41952.1609684375</constant>
