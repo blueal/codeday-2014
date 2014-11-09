@@ -46,6 +46,7 @@
   <scripts name="scripts">
     <script>scripts\script_Players.gml</script>
     <script>scripts\script_BasesChangeTeam.gml</script>
+    <script>scripts\script_AmountInList.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\base_numbers</font>

@@ -25,7 +25,6 @@ if(argument0 == "create"){
     }
     else if(argument1 == "yellow"){
         list_id = global.yellowPlayerList;
-        
         ds_list_add(list_id, argument2);
         (argument2).sprite_index = spr_y_ship;
         (argument2).team = "yellow";
