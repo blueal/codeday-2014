@@ -31,7 +31,7 @@ else if(team=="blue") { modifer = ds_list_size(global.blueBaseList)}
 else if(team=="yellow") { modifer = ds_list_size(global.yellowBaseList)}
 else if(team=="green") { modifer = ds_list_size(global.greenBaseList)}
 
-if(team=="pink") { soldiers = ds_list_size(global.pinkPlayerList)}
+if(team=="pink") { soldiers = (ds_list_size(global.pinkPlayerListLeft)) + (ds_list_size(global.pinkPlayerListRight))}
 else if(team=="blue") { soldiers = ds_list_size(global.bluePlayerList)}
 else if(team=="yellow") { soldiers = ds_list_size(global.yellowPlayerList)}
 else if(team=="green") { soldiers = ds_list_size(global.greenPlayerList)}

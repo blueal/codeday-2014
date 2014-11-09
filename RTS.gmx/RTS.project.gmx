@@ -74,7 +74,8 @@
       <object>objects\obj_ship</object>
       <object>objects\obj_base</object>
       <object>objects\obj_controller</object>
-      <object>objects\obj_clickmarker</object>
+      <object>objects\obj_clickmarkerLeft</object>
+      <object>objects\obj_clickmarkerRight</object>
     </objects>
     <object>objects\object5</object>
     <object>objects\player_blue</object>

@@ -27,12 +27,24 @@
             <kind>1</kind>
             <string>if (mouse_check_button(mb_left))
 {
-    if instance_exists (obj_clickmarker) 
+    if instance_exists (obj_clickmarkerLeft) 
         
-        with(obj_clickmarker)
+        with(obj_clickmarkerLeft)
         instance_destroy ()
     
-    instance_create (mouse_x, mouse_y, obj_clickmarker)
+    instance_create (mouse_x, mouse_y, obj_clickmarkerLeft)
+    //timer = 120 //2 seconds
+    
+    
+}
+if (mouse_check_button(mb_right))
+{
+    if instance_exists (obj_clickmarkerRight) 
+        
+        with(obj_clickmarkerRight)
+        instance_destroy ()
+    
+    instance_create (mouse_x, mouse_y, obj_clickmarkerRight)
     //timer = 120 //2 seconds
     
     

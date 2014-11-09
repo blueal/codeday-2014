@@ -10,7 +10,8 @@
   <persistent>0</persistent>
   <colour>0</colour>
   <showcolour>-1</showcolour>
-  <code>global.pinkPlayerList = ds_list_create();
+  <code>global.pinkPlayerListLeft = ds_list_create();
+global.pinkPlayerListRight = ds_list_create();
 global.bluePlayerList = ds_list_create();
 global.yellowPlayerList = ds_list_create();
 global.greenPlayerList = ds_list_create();

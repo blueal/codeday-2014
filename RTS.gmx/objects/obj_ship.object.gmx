@@ -105,18 +105,41 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>list_id_left = global.pinkPlayerListLeft;        
+list_id_right= global.pinkPlayerListRight;
+left = ds_list_find_index(list_id_left,self.id);
+isleft = 0;
+if(left == -1)
+{
+    isleft = false;
+}
+else
+{
+    isleft = true;
+}
+
 if(team=="pink")
 {
-    if (mouse_check_button(mb_left)) &amp;&amp; (distance_to_object(obj_clickmarker) &gt; 5)
+    if (mouse_check_button(mb_left)) &amp;&amp; (distance_to_object(obj_clickmarkerLeft) &gt; 5) &amp;&amp; (isleft) 
     {
-        move_towards_point(obj_clickmarker.x,obj_clickmarker.y,2)
+        move_towards_point(obj_clickmarkerLeft.x,obj_clickmarkerLeft.y,2)
     }
-    if (distance_to_object (obj_clickmarker) &lt;= 10+obj_p_cube.troop/20)
+    else if(mouse_check_button(mb_right)) &amp;&amp; (distance_to_object(obj_clickmarkerRight) &gt; 5) &amp;&amp; (!isleft)
+    {
+        move_towards_point(obj_clickmarkerRight.x,obj_clickmarkerRight.y,2);
+    } 
+    
+    if (distance_to_object (obj_clickmarkerLeft) &lt;= 10+obj_p_cube.troop/20)
     {
         speed = 0;
-        obj_clickmarker.visible = false;    
+        obj_clickmarkerLeft.visible = false;    
     }
+    if (distance_to_object (obj_clickmarkerRight) &lt;= 10+obj_p_cube.troop/20)
+    {
+        speed = 0;
+        obj_clickmarkerRight.visible = false;    
+    }    
+    
 } else if (team=="blue") {
     move_towards_point(player_blue.markerx,player_blue.markery,2)
     if (distance_to_point(player_blue.markerx,player_blue.markery) &lt;= 15+obj_b_cube.troop/30)
