@@ -10,6 +10,7 @@
       <sprite>sprites\spr_start_button</sprite>
       <sprite>sprites\spr_extra_button</sprite>
       <sprite>sprites\spr_quit_button</sprite>
+      <sprite>sprites\spr_back_button</sprite>
     </sprites>
     <sprites name="players">
       <sprites name="pink">
@@ -53,6 +54,7 @@
       <object>objects\obj_start_button</object>
       <object>objects\obj_extra_button</object>
       <object>objects\obj_quit_button</object>
+      <object>objects\obj_back_button</object>
     </objects>
     <objects name="gameplay_objects">
       <objects name="playernamestuffs">
