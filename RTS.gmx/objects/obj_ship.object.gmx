@@ -105,37 +105,6 @@ instance_destroy()
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*hp = 1000
-if team != "pink"
-{
-obj_ship = enemy_of_pink
-}
-if team = "pink" &amp;&amp; distance_to_object (obj_ship) &lt;= 5
-{
-
-
-}
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
             <string>
 if(team=="pink")
 {
@@ -147,6 +116,12 @@ if(team=="pink")
     {
         speed = 0;
         obj_clickmarker.visible = false;    
+    }
+} else if (team=="blue") {
+    move_towards_point(player_blue.markerx,player_blue.markery,2)
+    if (distance_to_point(player_blue.markerx,player_blue.markery) &lt;= 15+obj_b_cube.troop/30)
+    {
+        speed = 0;
     }
 }
 /*if (distance_to_object (obj_p_cube) &lt;= 10)
@@ -170,6 +145,37 @@ if(hp&lt;1)
 {
     instance_destroy()
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*hp = 1000
+if team != "pink"
+{
+obj_ship = enemy_of_pink
+}
+if team = "pink" &amp;&amp; distance_to_object (obj_ship) &lt;= 5
+{
+
+
+}
+
 </string>
           </argument>
         </arguments>
