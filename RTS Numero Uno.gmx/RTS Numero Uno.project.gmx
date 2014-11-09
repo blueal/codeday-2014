@@ -8,6 +8,7 @@
   <sprites name="sprites">
     <sprite>sprites\spr_ship</sprite>
     <sprite>sprites\spr_base</sprite>
+    <sprite>sprites\spr_clickmarker</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\br_space</background>
@@ -16,6 +17,8 @@
   <objects name="objects">
     <object>objects\obj_ship</object>
     <object>objects\obj_base</object>
+    <object>objects\obj_clickmarker</object>
+    <object>objects\controller</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_mainroom</room>
