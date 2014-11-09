@@ -35,12 +35,17 @@ if(!(idle))
     }
     
    
-    if(ds_list_size(global.bluePlayerList)&lt;(60*a[0].modifer) &amp;&amp; !(attack))
+    if(ds_list_size(global.bluePlayerList)&lt;(60*ds_list_size(global.blueBaseList)) &amp;&amp; !(attack))
     {
-        
-        markerx = a[0].x-(a[0].x-a[1].x)/2
-        markery = a[0].y-(a[0].y-a[1].y)/2
-    } else {
+        if(ds_list_size(global.blueBaseList)&gt;1)
+        {
+            markerx = a[0].x-(a[0].x-a[1].x)/2
+            markery = a[0].y-(a[0].y-a[1].y)/2
+        } else if(ds_list_size(global.blueBaseList)==1){
+            markerx = a[0]
+            markery = a[0]
+        }
+    } else if (ds_list_size(global.blueBaseList))&gt;0{
         if(charge)
         {
             attack=true
@@ -48,39 +53,48 @@ if(!(idle))
             show_debug_message("CHARGE: "+string(target))
             if(target==0)
             {
-                i = ds_list_size(global.pinkBaseList)
-                for(w=0;w&lt;=i;w++)
+                if(ds_list_size(global.yellowBaseList)!=0)
                 {
-                    b[w]=ds_list_find_value(global.pinkBaseList,w);
+                    i = ds_list_size(global.pinkBaseList)
+                    for(w=0;w&lt;i;w++)
+                    {
+                        b[w]=ds_list_find_value(global.pinkBaseList,w);
+                    }
+                    temp = random_range(0,i)
+                    markerx = b[temp].x
+                    markery = b[temp].y
+                    show_debug_message("PINK")
                 }
-                temp = random_range(0,ds_list_size(global.yellowBaseList))
-                markerx = b[temp].x
-                markery = b[temp].y
-                show_debug_message("PINK")
             }
             if(target==1)
             {
-                i = ds_list_size(global.yellowBaseList);
-                for(w=0;w&lt;=i;w++)
+                if(ds_list_size(global.yellowBaseList)!=0)
                 {
-                    b[w]=ds_list_find_value(global.yellowBaseList,w);
+                    i = ds_list_size(global.yellowBaseList);
+                    for(w=0;w&lt;i;w++)
+                    {
+                        b[w]=ds_list_find_value(global.yellowBaseList,w);
+                    }
+                    temp = random_range(0,i)
+                    markerx = b[temp].x
+                    markery = b[temp].y
+                    show_debug_message("YELLOW")
                 }
-                temp = random_range(0,ds_list_size(global.yellowBaseList))
-                markerx = b[temp].x
-                markery = b[temp].y
-                show_debug_message("YELLOW")
             }
             if(target==2)
             {
-                i = ds_list_size(global.greenBaseList)
-                for(w=0;w&lt;=i;w++)
+                if(ds_list_size(global.greenBaseList)!=0)
                 {
-                    b[w]=ds_list_find_value(global.greenBaseList,w);
+                    i = ds_list_size(global.greenBaseList)
+                    for(w=0;w&lt;i;w++)
+                    {
+                        b[w]=ds_list_find_value(global.greenBaseList,w);
+                    }
+                    temp = random_range(0,i)
+                    markerx = b[temp].x
+                    markery = b[temp].y
+                    show_debug_message("GREEN")
                 }
-                temp = random_range(0,ds_list_size(global.yellowBaseList))
-                markerx = b[temp].x
-                markery = b[temp].y
-                show_debug_message("GREEN")
             }
             charge=false;
             
@@ -196,6 +210,28 @@ if(!(idle))
           <argument>
             <kind>0</kind>
             <string>0</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>markerx=0
+markery=0
+</string>
           </argument>
         </arguments>
       </action>

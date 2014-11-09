@@ -79,7 +79,7 @@ if (timer &gt; 9*modifer)
 {
     script_BasesChangeTeam(touchedTeam, self.id);
     team = touchedTeam;
-    hp = 500;
+    hp = 5000;
 }
 </string>
           </argument>
@@ -176,7 +176,7 @@ if (timer &gt; 9*modifer)
           </argument>
           <argument>
             <kind>0</kind>
-            <string>500</string>
+            <string>5000</string>
           </argument>
         </arguments>
       </action>

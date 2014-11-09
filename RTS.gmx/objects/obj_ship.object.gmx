@@ -225,6 +225,8 @@ if team = "pink" &amp;&amp; distance_to_object (obj_ship) &lt;= 5
 {
     other.hp-=50;
     other.touchedTeam = team;
+} else {
+    other.hp+=45;
 }
 </string>
           </argument>
