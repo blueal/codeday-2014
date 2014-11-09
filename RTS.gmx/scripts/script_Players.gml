@@ -9,34 +9,36 @@ if(argument0 == "create"){
     if(argument1 == "pink"){
         
         list_id = global.pinkPlayerList;
-        amountInArray = ds_list_size(list_id);
         ds_list_add(list_id, argument2);
         (argument2).sprite_index = spr_p_ship;
         (argument2).team = "pink";
+        amountInArray = ds_list_size(list_id);
         obj_p_cube.troop=amountInArray;
     }
     else if(argument1 == "blue"){
         list_id = global.bluePlayerList;
-        amountInArray = ds_list_size(list_id);
         ds_list_add(list_id, argument2);
         (argument2).sprite_index = spr_b_ship;
         (argument2).team = "blue";
+        amountInArray = ds_list_size(list_id);
         obj_b_cube.troop=amountInArray;
     }
     else if(argument1 == "yellow"){
         list_id = global.yellowPlayerList;
-        amountInArray = ds_list_size(list_id);
+        
         ds_list_add(list_id, argument2);
         (argument2).sprite_index = spr_y_ship;
         (argument2).team = "yellow";
+        amountInArray = ds_list_size(list_id);
         obj_y_cube.troop=amountInArray;    
     }
     else if(argument1 == "green"){
         list_id = global.greenPlayerList;
-        amountInArray = ds_list_size(list_id);
+        
         ds_list_add(list_id, argument2);
         (argument2).sprite_index = spr_g_ship;
         (argument2).team = "green";
+        amountInArray = ds_list_size(list_id);
         obj_g_cube.troop=amountInArray;    
     }
 }
