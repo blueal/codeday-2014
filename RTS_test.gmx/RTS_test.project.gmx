@@ -41,6 +41,8 @@
   <backgrounds name="background">
     <background>background\br_space</background>
     <background>background\br_credits</background>
+    <background>background\br_winscreen</background>
+    <background>background\br_losescreen</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -85,9 +87,11 @@
     <room>rooms\rm_start</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_credits</room>
+    <room>rooms\rm_winscreen</room>
+    <room>rooms\rm_losescreen</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41952.7031697569</constant>
+    <constant name="GM_build_date">41952.8640343634</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

@@ -362,7 +362,6 @@ if(other.team != team)
     }
 }
 
-show_debug_message(string(colision));
 
 if(takeit)
 {
