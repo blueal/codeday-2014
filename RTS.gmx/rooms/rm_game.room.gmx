@@ -75,7 +75,6 @@ show_debug_message("Room Loaded");</code>
     <instance objName="obj_controller" x="0" y="0" name="inst_C69A3BBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4240" y="3312" name="inst_E698D66F" locked="0" code="team=&quot;green&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="player_blue" x="0" y="32" name="inst_03CBB0F2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-<<<<<<< HEAD
     <instance objName="obj_base" x="4688" y="3856" name="inst_D59954A2" locked="0" code="team=&quot;pink&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4096" y="3584" name="inst_0A77F79A" locked="0" code="team=&quot;yellow&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4256" y="3200" name="inst_D40163FE" locked="0" code="team=&quot;green&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -84,9 +83,7 @@ show_debug_message("Room Loaded");</code>
     <instance objName="obj_base" x="4128" y="3280" name="inst_DA0BEC65" locked="0" code="team = &quot;green&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4112" y="3648" name="inst_6F9BB5AF" locked="0" code="team=&quot;yellow&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4048" y="3632" name="inst_680B4DA7" locked="0" code="team=&quot;yellow&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-=======
     <instance objName="object5" x="16" y="224" name="inst_4FE11B2E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
->>>>>>> origin/master
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
