@@ -26,21 +26,34 @@
           <argument>
             <kind>1</kind>
             <string>timer++
-if (timer &gt; 60)
-{
-    do {
-        new_x = random_range(32,-32);
-        new_y = random_range(32,-32);
-    } until place_free(x+new_x, y+new_y);
-    v_id = instance_create(x+new_x,y+new_y, obj_ship);
+if(team=="pink") { modifer = ds_list_size(global.pinkBaseList)}
+else if(team=="blue") { modifer = ds_list_size(global.blueBaseList)}
+else if(team=="yellow") { modifer = ds_list_size(global.yellowBaseList)}
+else if(team=="green") { modifer = ds_list_size(global.greenBaseList)}
 
-    //We need to check what team the base belongs to
-    //After we figure out what base it belongs to we call a script
-    //to run the commands neccasary for team specific ships
+if(team=="pink") { soldiers = ds_list_size(global.pinkPlayerList)}
+else if(team=="blue") { soldiers = ds_list_size(global.bluePlayerList)}
+else if(team=="yellow") { soldiers = ds_list_size(global.yellowPlayerList)}
+else if(team=="green") { soldiers = ds_list_size(global.greenPlayerList)}
+
+if (timer &gt; 59*modifer)
+{
+    if(soldiers&lt;120*modifer)
+    {
+        do {
+            new_x = random_range(32,-32);
+            new_y = random_range(32,-32);
+        } until place_free(x+new_x, y+new_y);
+        v_id = instance_create(x+new_x,y+new_y, obj_ship);
     
-    script_Players("create", team, v_id);
-    
-    timer = 0;
+        //We need to check what team the base belongs to
+        //After we figure out what base it belongs to we call a script
+        //to run the commands neccasary for team specific ships
+        
+        script_Players("create", team, v_id);
+        
+        timer = 0;
+    }   
 }
 </string>
           </argument>
