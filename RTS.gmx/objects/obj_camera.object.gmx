@@ -101,6 +101,12 @@ if(keyboard_check(ord('A')))
         obj_camera.x-=10;
     }
 }
+
+if(keyboard_check(vk_space))
+{
+   x=startx
+   y=starty
+}
 </string>
           </argument>
         </arguments>
