@@ -29,9 +29,10 @@
 {
     move_towards_point(obj_clickmarker.x,obj_clickmarker.y,5)
 }
-if (distance_to_object (obj_clickmarker) &lt;= 5)
+if (distance_to_object (obj_clickmarker) &lt;= 10)
 {
 speed = 0;
+obj_clickmarker.visible = false;    
 }
     
 </string>
