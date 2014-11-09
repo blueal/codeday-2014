@@ -81,7 +81,10 @@ global.group4[0] = 100011;
 global.group5[0] = 100012;
 global.group6[0] = 100014;
 
-
+global.pinkPlayer[0] = "pink";
+global.bluePlayer[0] = "blue";
+global.yellowPlayer[0] = "yellow";
+global.greenPlayer[0] = "green";
 </string>
           </argument>
         </arguments>
@@ -113,7 +116,7 @@ if (timer &gt; 59)
     } until place_free(x+new_x, y+new_y);
     v_id = instance_create(x+new_x,y+new_y, obj_ship);
     self_id = self.id;
-    
+    /*
     if(global.group1[0] == self_id)
     {
         endOfArray = array_length_1d(global.group1);
@@ -155,6 +158,24 @@ if (timer &gt; 59)
         show_debug_message("Fatal Error: ID of Base not found within given arrays");
         game_end();
     }
+    */
+    if(team == "pink")
+    {
+        script_Players("pink", v_id);
+    }
+    else if(team == "blue")
+    {
+        script_Players("blue", v_id);
+    }
+    else if(team == "yellow")
+    {
+        script_Players("yellow", v_id);
+    }
+    else if(team == "green")
+    {
+        script_Players("green", v_id);
+    }
+    
     timer = 0;
 }
 
