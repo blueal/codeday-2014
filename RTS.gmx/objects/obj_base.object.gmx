@@ -8,12 +8,12 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="0" enumb="0">
+    <event eventtype="3" enumb="1">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -25,14 +25,92 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>team</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>"pink"</string>
+            <string></string>
           </argument>
         </arguments>
       </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>timer++
+if (timer &gt; 119)
+{
+    do {
+        new_x = random_range(32,-32);
+        new_y = random_range(32,-32);
+    } until place_free(x+new_x, y+new_y);
+    v_id = instance_create(x+new_x,y+new_y, obj_ship);
+
+    //We need to check what team the base belongs to
+    //After we figure out what base it belongs to we call a script
+    //to run the commands neccasary for team specific ships
+    
+    script_Players("create", team, v_id);
+    
+    timer = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/*if(team == "pink")
+{
+    sprite_index = spr_p_base
+    obj_p_cube.bases+=1;
+} 
+else if (team=="blue") 
+{
+    sprite_index = spr_b_base
+    obj_b_cube.bases+=1;
+}
+if(team == "yellow")
+{
+    sprite_index = spr_y_base
+    obj_y_cube.bases+=1;
+} 
+else if (team=="green") 
+{
+    sprite_index = spr_g_base
+    obj_g_cube.bases+=1;
+}
+*/
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
       <action>
         <libid>1</libid>
         <id>611</id>
@@ -73,8 +151,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>show_debug_message(self.id);
-global.base1[0] = 100008;
+            <string>global.base1[0] = 100008;
 global.base2[0] = 100009;
 global.base3[0] = 100010;
 global.base4[0] = 100011;
@@ -86,127 +163,13 @@ global.bluePlayer[0] = "blue";
 global.yellowPlayer[0] = "yellow";
 global.greenPlayer[0] = "green";
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>obj_p_cube.bases=0;
-obj_b_cube.bases=0;
-obj_y_cube.bases=0;
-obj_g_cube.bases=0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>timer++
-if (timer &gt; 119)
-{
-    do {
-        new_x = random_range(32,-32);
-        new_y = random_range(32,-32);
-    } until place_free(x+new_x, y+new_y);
-    v_id = instance_create(x+new_x,y+new_y, obj_ship);
+global.pinkBase[0] = "pink";
+global.blueBase[0] = "blue";
+global.yellowBase[0] = "yellow";
+global.greenBase[0] = "green";
 
-    //We need to check what team the base belongs to
-    //After we figure out what base it belongs to we call a script
-    //to run the commands neccasary for team specific ships
-    
-    if(team == "pink")
-    {
-        script_Players("pink", v_id);
-    }
-    else if(team == "blue")
-    {
-        script_Players("blue", v_id);
-    }
-    else if(team == "yellow")
-    {
-        script_Players("yellow", v_id);
-    }
-    else if(team == "green")
-    {
-        script_Players("green", v_id);
-    }
-    
-    timer = 0;
-}
+script_BasesChangeTeam(team, self.id);
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if(team == "pink")
-{
-    sprite_index = spr_p_base
-    obj_p_cube.bases+=1;
-} 
-else if (team=="blue") 
-{
-    sprite_index = spr_b_base
-    obj_b_cube.bases+=1;
-}
-if(team == "yellow")
-{
-    sprite_index = spr_y_base
-    obj_y_cube.bases+=1;
-} 
-else if (team=="green") 
-{
-    sprite_index = spr_g_base
-    obj_g_cube.bases+=1;
-}
 </string>
           </argument>
         </arguments>
