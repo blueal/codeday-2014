@@ -59,17 +59,16 @@ if (timer &gt; 59)
         new_y = random_range(32,-32);
     } until place_free(x+new_x, y+new_y);
     v_id = instance_create(x+new_x,y+new_y, obj_ship);
+
+
+    ContaingingSprites1[0] = self.id;
+    endOfArray = array_length_1d(ContaingingSprites1);
+    ContaingingSprites1[endOfArray] = v_id;
     
-    MasterArray[0] = self.id;
-    endOfArray = array_length_1d(MasterArray);
-    MasterArray[endOfArray] = v_id;
-    
-    show_debug_message(MasterArray);
+    show_debug_message(ContaingingSprites1);
     
     timer = 0;
 }
-
-
 
 </string>
           </argument>
