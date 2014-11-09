@@ -32,12 +32,18 @@
         with(obj_clickmarker)
         instance_destroy ()
     
-    instance_create (mouse_x, mouse_y, obj_clickmarker)
-    //timer = 120 //2 seconds
-    
-    
+    instance_create (mouse_x, mouse_y, obj_clickmarker) 
 }
 
+/*timer = 120 //2 seconds
+if (timer &lt;= 0)
+{
+instance_destroy ()
+}
+else
+{
+timer -=1
+}
 </string>
           </argument>
         </arguments>
