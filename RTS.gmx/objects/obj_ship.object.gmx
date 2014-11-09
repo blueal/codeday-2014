@@ -34,7 +34,23 @@ if (distance_to_object (obj_clickmarker) &lt;= 10)
 speed = 0;
 obj_clickmarker.visible = false;    
 }
-    
+
+/*if (distance_to_object (obj_p_cube) &lt;= 10)
+{
+    base_timer = 600
+    base_timer -= 1
+}    
+else 
+{
+    base_timer =600
+}
+
+if base_timer = 0
+{
+with obj_p_cube instance_destroy ()
+action_create_object (obj_p_cube.x, obj_p_cube.y, obj_b_cube)
+
+}
 </string>
           </argument>
         </arguments>
