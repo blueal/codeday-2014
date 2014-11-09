@@ -46,47 +46,6 @@ if (timer &gt; 60)
           </argument>
         </arguments>
       </action>
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/*if(team == "pink")
-{
-    sprite_index = spr_p_base
-    obj_p_cube.bases+=1;
-} 
-else if (team=="blue") 
-{
-    sprite_index = spr_b_base
-    obj_b_cube.bases+=1;
-}
-if(team == "yellow")
-{
-    sprite_index = spr_y_base
-    obj_y_cube.bases+=1;
-} 
-else if (team=="green") 
-{
-    sprite_index = spr_g_base
-    obj_g_cube.bases+=1;
-}
-*/
-</string>
-          </argument>
-        </arguments>
-      </action>
     </event>
     <event eventtype="7" enumb="4">
       <action>
@@ -129,14 +88,7 @@ else if (team=="green")
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/*global.base1[0] = 100008;
-global.base2[0] = 100009;
-global.base3[0] = 100010;
-global.base4[0] = 100011;
-global.base5[0] = 100012;
-global.base6[0] = 100014;
-*/
-global.pinkPlayerList = ds_list_create();
+            <string>global.pinkPlayerList = ds_list_create();
 global.bluePlayerList = ds_list_create();
 global.yellowPlayerList = ds_list_create();
 global.greenPlayerList = ds_list_create();
@@ -146,26 +98,18 @@ global.blueBaseList = ds_list_create();
 global.yellowBaseList = ds_list_create();
 global.greenBaseList = ds_list_create();
 
-ds_list_add(global.pinkPlayerList, "pink") //Adds the value at the end of the list.
+/*
+ds_list_add(global.pinkPlayerList, "pink")
 ds_list_add(global.bluePlayerList, "blue")
 ds_list_add(global.yellowPlayerList, "yellow")
 ds_list_add(global.greenPlayerList, "green")
 
-ds_list_add(global.pinkBaseList, "pink") //Adds the value at the end of the list.
+ds_list_add(global.pinkBaseList, "pink") 
 ds_list_add(global.blueBaseList, "blue")
 ds_list_add(global.yellowBaseList, "yellow")
 ds_list_add(global.greenBaseList, "green")
-/*
-global.pinkPlayer[0] = "pink";
-global.bluePlayer[0] = "blue";
-global.yellowPlayer[0] = "yellow";
-global.greenPlayer[0] = "green";
-
-global.pinkBase[0] = "pink";
-global.blueBase[0] = "blue";
-global.yellowBase[0] = "yellow";
-global.greenBase[0] = "green";
 */
+
 script_BasesChangeTeam(team, self.id);
 
 </string>
