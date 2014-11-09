@@ -36,6 +36,7 @@
     </sprites>
     <sprite>sprites\spr_camera</sprite>
     <sprite>sprites\spr_clickmarker</sprite>
+    <sprite>sprites\spr_title</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\br_space</background>
@@ -56,6 +57,7 @@
       <object>objects\obj_extra_button</object>
       <object>objects\obj_quit_button</object>
       <object>objects\obj_back_button</object>
+      <object>objects\obj_title</object>
     </objects>
     <objects name="gameplay_objects">
       <objects name="playernamestuffs">
