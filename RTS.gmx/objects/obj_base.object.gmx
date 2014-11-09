@@ -74,12 +74,12 @@
           <argument>
             <kind>1</kind>
             <string>show_debug_message(self.id);
-global.group1[0] = 100008;
-global.group2[0] = 100009;
-global.group3[0] = 100010;
-global.group4[0] = 100011;
-global.group5[0] = 100012;
-global.group6[0] = 100014;
+global.base1[0] = 100008;
+global.base2[0] = 100009;
+global.base3[0] = 100010;
+global.base4[0] = 100011;
+global.base5[0] = 100012;
+global.base6[0] = 100014;
 
 global.pinkPlayer[0] = "pink";
 global.bluePlayer[0] = "blue";
