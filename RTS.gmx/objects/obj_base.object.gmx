@@ -142,27 +142,25 @@ if (timer &gt; 59)
     } until place_free(x+new_x, y+new_y);
     v_id = instance_create(x+new_x,y+new_y, obj_ship);
 
-   
+    //We need to check what team the base belongs to
+    //After we figure out what base it belongs to we call a script
+    //to run the commands neccasary for team specific ships
+    
     if(team == "pink")
     {
         script_Players("pink", v_id);
-        (v_id).sprite_index = spr_p_ship
-        
     }
     else if(team == "blue")
     {
         script_Players("blue", v_id);
-        (v_id).sprite_index = spr_b_ship
     }
     else if(team == "yellow")
     {
         script_Players("yellow", v_id);
-        (v_id).sprite_index = spr_y_ship
     }
     else if(team == "green")
     {
         script_Players("green", v_id);
-        (v_id).sprite_index = spr_g_ship
     }
     
     timer = 0;
