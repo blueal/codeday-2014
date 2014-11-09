@@ -71,26 +71,53 @@ obj_g_cube.y = obj_camera.y - 16;
             <kind>1</kind>
             <string>if(keyboard_check(ord('W')))
 {
-    obj_camera.y-=20;
+    
+    if !(y&lt;-1536+starty)
+    {
+        obj_camera.y-=20;
+    }
 }
 
 if(keyboard_check(ord('S')))
 {
-    obj_camera.y+=20;
-}
-
-if(keyboard_check(ord('A')))
-{
-    obj_camera.x-=20;
+    if !(y&gt;1536+starty)
+    {
+        obj_camera.y+=20;
+    }
 }
 
 if(keyboard_check(ord('D')))
 {
-    obj_camera.x+=20;
+    if !(x&gt;3072+startx)
+    {
+        obj_camera.x+=20;
+    }
+}
+
+if(keyboard_check(ord('A')))
+{
+    if !(x&lt;-3072+startx)
+    {
+        obj_camera.x-=20;
+    }
 }
 </string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>0</libid>
+        <id>0</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>0</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -110,21 +137,83 @@ if(keyboard_check(ord('D')))
             <kind>1</kind>
             <string>if(mouse_x &gt; 988+view_xview)
 {
-    obj_camera.x+=10;
+    if !(x&gt;3072+startx)
+    {
+        obj_camera.x+=10;
+    }
 }
 if(mouse_x &lt; 36+view_xview)
 {
-    obj_camera.x-=10;
+    if !(x&lt;-3072+startx)
+    {
+        obj_camera.x-=10;
+    }
 }
 if(mouse_y &gt; 732+view_yview)
 {
-    obj_camera.y+=10;
+    if !(y&gt;1536+starty)
+    {
+        obj_camera.y+=10;
+    }
 }
 if(mouse_y &lt; 36+view_yview)
 {
-    obj_camera.y-=10;
+    if !(y&lt;-1536+starty)
+    {
+        obj_camera.y-=10;
+    }
 }
 </string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>startx</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>x</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>starty</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>y</string>
           </argument>
         </arguments>
       </action>
