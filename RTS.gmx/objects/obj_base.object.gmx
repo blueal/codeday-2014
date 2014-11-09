@@ -135,7 +135,7 @@ obj_g_cube.bases=0;
           <argument>
             <kind>1</kind>
             <string>timer++
-if (timer &gt; 59)
+if (timer &gt; 119)
 {
     do {
         new_x = random_range(32,-32);

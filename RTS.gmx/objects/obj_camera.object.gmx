@@ -74,7 +74,7 @@ obj_g_cube.y = obj_camera.y - 16;
     
     if !(y&lt;-1536+starty)
     {
-        obj_camera.y-=20;
+        obj_camera.y-=10;
     }
 }
 
@@ -82,7 +82,7 @@ if(keyboard_check(ord('S')))
 {
     if !(y&gt;1536+starty)
     {
-        obj_camera.y+=20;
+        obj_camera.y+=10;
     }
 }
 
@@ -90,7 +90,7 @@ if(keyboard_check(ord('D')))
 {
     if !(x&gt;3072+startx)
     {
-        obj_camera.x+=20;
+        obj_camera.x+=10;
     }
 }
 
@@ -98,7 +98,7 @@ if(keyboard_check(ord('A')))
 {
     if !(x&lt;-3072+startx)
     {
-        obj_camera.x-=20;
+        obj_camera.x-=10;
     }
 }
 </string>
@@ -139,28 +139,28 @@ if(keyboard_check(ord('A')))
 {
     if !(x&gt;3072+startx)
     {
-        obj_camera.x+=10;
+        obj_camera.x+=5;
     }
 }
 if(mouse_x &lt; 36+view_xview)
 {
     if !(x&lt;-3072+startx)
     {
-        obj_camera.x-=10;
+        obj_camera.x-=5;
     }
 }
 if(mouse_y &gt; 732+view_yview)
 {
     if !(y&gt;1536+starty)
     {
-        obj_camera.y+=10;
+        obj_camera.y+=5;
     }
 }
 if(mouse_y &lt; 36+view_yview)
 {
     if !(y&lt;-1536+starty)
     {
-        obj_camera.y-=10;
+        obj_camera.y-=5;
     }
 }
 </string>

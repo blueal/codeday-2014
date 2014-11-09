@@ -82,7 +82,7 @@ if(team=="pink")
 {
     if (mouse_check_button(mb_left)) &amp;&amp; (distance_to_object(obj_clickmarker) &gt; 5)
     {
-        move_towards_point(obj_clickmarker.x,obj_clickmarker.y,5)
+        move_towards_point(obj_clickmarker.x,obj_clickmarker.y,2)
     }
     if (distance_to_object (obj_clickmarker) &lt;= 10+obj_p_cube.troop/25)
     {

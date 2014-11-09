@@ -51,18 +51,18 @@
     <view visible="0" objName="&lt;undefined&gt;" xview="0" yview="0" wview="1024" hview="768" xport="0" yport="0" wport="1024" hport="768" hborder="32" vborder="32" hspeed="-1" vspeed="-1"/>
   </views>
   <instances>
-    <instance objName="obj_camera" x="4576" y="3408" name="inst_B5583FB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_camera" x="4608" y="3456" name="inst_B5583FB0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_p_cube" x="3952" y="3072" name="inst_ACC1D22A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_g_cube" x="3952" y="3344" name="inst_BE332037" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_b_cube" x="3952" y="3152" name="inst_57416394" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_y_cube" x="3952" y="3248" name="inst_9D6D1C68" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_base" x="4608" y="3248" name="inst_33D04428" locked="0" code="team=&quot;blue&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4656" y="3152" name="inst_33D04428" locked="0" code="team=&quot;blue&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_base" x="4912" y="3392" name="inst_C0326D6E" locked="0" code="team=&quot;blue&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_base" x="4768" y="3648" name="inst_8E776C58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_base" x="4384" y="3648" name="inst_E53B1C51" locked="0" code="team = &quot;yellow&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_base" x="4384" y="3296" name="inst_8BBD97F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4912" y="3648" name="inst_8E776C58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4336" y="3648" name="inst_E53B1C51" locked="0" code="team = &quot;yellow&quot;;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4320" y="3280" name="inst_8BBD97F0" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_controller" x="0" y="0" name="inst_C69A3BBD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_base" x="4608" y="3728" name="inst_E698D66F" locked="0" code="team=&quot;green&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_base" x="4624" y="3792" name="inst_E698D66F" locked="0" code="team=&quot;green&quot;&#xA;" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
