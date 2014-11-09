@@ -204,6 +204,33 @@ if team = "pink" &amp;&amp; distance_to_object (obj_ship) &lt;= 5
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_base">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(other.team != team)
+{
+    other.hp-=50;
+    other.touchedTeam = team;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_ship">
       <action>
         <libid>1</libid>
@@ -223,12 +250,15 @@ if team = "pink" &amp;&amp; distance_to_object (obj_ship) &lt;= 5
             <kind>1</kind>
             <string>if(other.sprite_index==sprite_index)
 {
+    //Colliding with ship of same team
     x += random_range(-1,1)
     y += random_range(-1,1)
 } else if(other.sprite_index!=sprite_index){
+    //colliding with another team
     x += random_range(-0.5,0.5)
     y += random_range(-0.5,0.5)
     other.hp-=5;
+    other.touchedTeam = team;
     lastTouched = other
     /*if(sprite_index==spr_p_ship)
     {
@@ -238,6 +268,7 @@ if team = "pink" &amp;&amp; distance_to_object (obj_ship) &lt;= 5
         }
     }*/
 }
+ 
 
 </string>
           </argument>
