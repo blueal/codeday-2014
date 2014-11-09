@@ -108,9 +108,10 @@ global.greenPlayer[0] = "green";
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>obj_p_cube.bases=0;
 obj_b_cube.bases=0;
-obj_p_cube.bases=0;
+obj_y_cube.bases=0;
+obj_g_cube.bases=0;
 </string>
           </argument>
         </arguments>
@@ -186,15 +187,25 @@ if (timer &gt; 59)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if(team == "blue")
-{
-    sprite_index = spr_b_base
-    obj_b_cube.bases+=1;
-} 
-else if (team=="pink") 
+            <string>if(team == "pink")
 {
     sprite_index = spr_p_base
     obj_p_cube.bases+=1;
+} 
+else if (team=="blue") 
+{
+    sprite_index = spr_b_base
+    obj_b_cube.bases+=1;
+}
+if(team == "yellow")
+{
+    sprite_index = spr_y_base
+    obj_y_cube.bases+=1;
+} 
+else if (team=="green") 
+{
+    sprite_index = spr_g_base
+    obj_g_cube.bases+=1;
 }
 </string>
           </argument>
