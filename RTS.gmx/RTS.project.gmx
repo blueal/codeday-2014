@@ -11,7 +11,6 @@
       <sprite>sprites\spr_extra_button</sprite>
       <sprite>sprites\spr_quit_button</sprite>
     </sprites>
-    <sprite>sprites\sprite3</sprite>
     <sprites name="players">
       <sprites name="pink">
         <sprite>sprites\spr_p_cube</sprite>
@@ -27,11 +26,13 @@
       </sprites>
     </sprites>
     <sprite>sprites\spr_camera</sprite>
+    <sprite>sprites\sprite8</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <fonts name="fonts">
-    <font>fonts\font</font>
+    <font>fonts\base_numbers</font>
+    <font>fonts\troop_numers</font>
   </fonts>
   <objects name="objects">
     <objects name="startmenu_objects">
@@ -41,10 +42,13 @@
     </objects>
     <objects name="gameplay_objects">
       <objects name="playermarker">
-        <object>objects\obj_p_cube</object>
-        <object>objects\obj_b_cube</object>
+        <objects name="gameplay_menus">
+          <object>objects\gpm_upgrade</object>
+        </objects>
         <object>objects\obj_y_cube</object>
         <object>objects\obj_g_cube</object>
+        <object>objects\obj_b_cube</object>
+        <object>objects\obj_p_cube</object>
       </objects>
       <object>objects\obj_camera</object>
     </objects>
@@ -55,7 +59,7 @@
     <room>rooms\rm_game</room>
   </rooms>
   <constants number="2">
-    <constant name="GM_build_date">41951.9575112963</constant>
+    <constant name="GM_build_date">41952.0013778009</constant>
     <constant name="GM_version">'1.0.0.0'</constant>
   </constants>
   <help>

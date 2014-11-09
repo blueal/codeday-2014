@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_camera</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -92,8 +92,6 @@ if(keyboard_check(ord('D')))
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="8" enumb="73">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -110,20 +108,22 @@ if(keyboard_check(ord('D')))
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_font(font)
-
-draw_set_color(c_fuchsia);
-draw_text(obj_camera.x-416,obj_camera.y-261,obj_p_cube.bases)
-
-draw_set_color(c_aqua);
-draw_text(obj_camera.x-416,obj_camera.y-181,obj_b_cube.bases)
-
-draw_set_color(c_yellow);
-draw_text(obj_camera.x-416,obj_camera.y-101,obj_y_cube.bases)
-
-draw_set_color(c_lime);
-draw_text(obj_camera.x-416,obj_camera.y-21,obj_g_cube.bases)
-
+            <string>if(mouse_x &gt; 1000+view_xview)
+{
+    obj_camera.x+=10;
+}
+if(mouse_x &lt; 24+view_xview)
+{
+    obj_camera.x-=10;
+}
+if(mouse_y &gt; 744+view_yview)
+{
+    obj_camera.y+=10;
+}
+if(mouse_y &lt; 24+view_yview)
+{
+    obj_camera.y-=10;
+}
 </string>
           </argument>
         </arguments>

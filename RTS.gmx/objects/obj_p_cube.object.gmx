@@ -33,6 +33,81 @@
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>611</id>
+        <kind>6</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>troop</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>150</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="73">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>//Troop numbers
+draw_set_font(troop_numers)
+draw_set_color(c_fuchsia);
+draw_text(obj_camera.x-496,obj_camera.y-274,obj_p_cube.troop)
+
+draw_set_color(c_aqua);
+draw_text(obj_camera.x-496,obj_camera.y-194,obj_b_cube.troop)
+
+draw_set_color(c_yellow);
+draw_text(obj_camera.x-496,obj_camera.y-114,obj_y_cube.troop)
+
+draw_set_color(c_lime);
+draw_text(obj_camera.x-496,obj_camera.y-34,obj_g_cube.troop)
+
+
+//Base numbers
+draw_set_font(base_numbers)
+draw_set_color(c_fuchsia);
+draw_text(obj_camera.x-416,obj_camera.y-261,obj_p_cube.bases)
+
+draw_set_color(c_aqua);
+draw_text(obj_camera.x-416,obj_camera.y-181,obj_b_cube.bases)
+
+draw_set_color(c_yellow);
+draw_text(obj_camera.x-416,obj_camera.y-101,obj_y_cube.bases)
+
+draw_set_color(c_lime);
+draw_text(obj_camera.x-416,obj_camera.y-21,obj_g_cube.bases)
+
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
   </events>
   <PhysicsObject>0</PhysicsObject>
