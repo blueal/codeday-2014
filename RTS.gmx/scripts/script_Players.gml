@@ -9,23 +9,23 @@ if(argument0 == "pink"){
     endOfArray = array_length_1d(global.pinkPlayer);
     global.pinkPlayer[endOfArray] = argument1;
     show_debug_message(global.pinkPlayer);
-    obj_p_cube.troop+=1
+    obj_p_cube.troop=endOfArray;
 }
 else if(argument0 == "blue"){
     endOfArray = array_length_1d(global.bluePlayer);
     global.bluePlayer[endOfArray] = argument1;
     show_debug_message(global.bluePlayer);
-    obj_b_cube.troop+=1
+    obj_b_cube.troop=endOfArray;
 }
 else if(argument0 == "yellow"){
     endOfArray = array_length_1d(global.yellowPlayer);
     global.yellowPlayer[endOfArray] = argument1;
     show_debug_message(global.yellowPlayer);
-    obj_y_cube.troop+=1
+    obj_y_cube.troop=endOfArray;
 }
 else if(argument0 == "green"){
     endOfArray = array_length_1d(global.greenPlayer);
     global.greenPlayer[endOfArray] = argument1;
     show_debug_message(global.greenPlayer);
-    obj_g_cube.troop+=1
+    obj_g_cube.troop=endOfArray;
 }
