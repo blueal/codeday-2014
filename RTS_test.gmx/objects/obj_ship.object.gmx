@@ -262,7 +262,7 @@ if(team=="pink")
     }    
     
 } else if (team=="blue") {
-    move_towards_point(player_blue.markerx,player_blue.markery,5)
+    move_towards_point(player_blue.markerx,player_blue.markery,4)
     if (distance_to_point(player_blue.markerx,player_blue.markery) &lt;= 15+obj_b_cube.troop/30)
     {
         speed = 0;

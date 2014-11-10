@@ -84,7 +84,7 @@ if(!(idle))
         }
         
        
-        if(ds_list_size(global.bluePlayerList)&lt;(60*ds_list_size(global.blueBaseList)) &amp;&amp; !(attack))
+        if(ds_list_size(global.bluePlayerList)&lt;(30*ds_list_size(global.blueBaseList)) &amp;&amp; !(attack))
         {
             if(ds_list_size(global.blueBaseList)&gt;1)
             {
@@ -94,7 +94,7 @@ if(!(idle))
                 markerx = a[0]
                 markery = a[0]
             }
-        } else if (ds_list_size(global.blueBaseList))&gt;0{
+        } else {
             if(charge)
             {
                 attack=true

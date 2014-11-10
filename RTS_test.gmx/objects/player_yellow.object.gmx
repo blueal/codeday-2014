@@ -77,14 +77,14 @@ if(!(idle))
 
 {   if!(underattack)
     {
-        i = global.yellowBaseList;
+        i = ds_list_size(global.yellowBaseList);
         for(w=0;w&lt;=i;w++)
         {
             a[w]=ds_list_find_value(global.yellowBaseList,w);
         }
         
        
-        if(ds_list_size(global.yellowPlayerList)&lt;(60*ds_list_size(global.yellowBaseList)) &amp;&amp; !(attack))
+        if(ds_list_size(global.yellowPlayerList)&lt;(30*ds_list_size(global.yellowBaseList)) &amp;&amp; !(attack))
         {
             if(timer&gt;200)
             {
@@ -94,7 +94,6 @@ if(!(idle))
             
             
         }
-        
     } else {
         
         markerx = attackx
